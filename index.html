@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeira página html</title>
 </head>
 <body>
-    <style>
-        h1{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-        }
-        h2{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        h3{
-            font-family:'Courier New', Courier, monospace;
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            background-color: #333;
-            padding: 15px;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar a:hover {
-            color: lightblue;
-        }
-            </style>
     <center>
-    <nav class="navbar">
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contato</a>
-</nav>
     <h1> Meu nome é Pedro </h1>
-    <h2> Me llamo pedro </h2>
-    <h3> I am Pedro</h3>
-     <h3> Essa é a primeira pagina</h3>
-    <h3> Disciplina: Desenvolvimento Web, atividade 1 </h3>
-    <h4>Hello World!</h4>
+    <h2> Formulario de cadastro </h2>
     </center>
+<form id="formulario">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+    <label for="telefone">Telefone</label>
+  <input type="text" id="telefone" name="telefone">
+     <label for="Email">Email</label>
+  <input type="text" id="email" name="nome">
+  <br>
+  <button type = "submit" onclick = "alert('cadastrado com sucesso')">Cadastrar</button>
+</form>
+
 </body>
 </html>

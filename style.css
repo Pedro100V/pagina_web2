@@ -1,0 +1,42 @@
+       h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            font-family:'Courier New', Courier, monospace;
+        }
+form { 
+  max-width: 500px; 
+  margin: 40px auto; 
+  padding: 30px; 
+  background-color: #00eeff; 
+  border-radius: 8px; 
+  font-family: Arial, Helvetica, sans-serif; 
+} 
+
+.form { 
+  margin-bottom: 20px; 
+} 
+
+label { 
+  display: block; 
+  margin-bottom: 8px; 
+  font-weight: bold; 
+  color: #333; 
+} 
+
+button { 
+  display: block;
+  margin-top: 25px;
+  background-color: #ffffff; 
+  color: #333333; 
+  border: 1px solid #cccccc; 
+  padding: 10px 32px; 
+  font-size: 16px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  transition: background-color 0.2s; 
+}
