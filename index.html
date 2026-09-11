@@ -11,13 +11,17 @@
     <h1> Meu nome é Pedro </h1>
     <h2> Formulario de cadastro </h2>
     </center>
-<form id="formulario">
+<form id="formulario" action = "processa.php" method = "POST">
   <label for="nome">Nome:</label>
   <input type="text" id="nome" name="nome">
-    <label for="telefone">Telefone</label>
+
+  <label for="telefone">Telefone</label>
   <input type="text" id="telefone" name="telefone">
-     <label for="Email">Email</label>
-  <input type="text" id="email" name="nome">
+
+     <label for="email">Email</label>
+  <input type="text" id="email" name="email">
+
+  
   <br>
   <button type = "submit" onclick = "alert('cadastrado com sucesso')">Cadastrar</button>
 </form>
