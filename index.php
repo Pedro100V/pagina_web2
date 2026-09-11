@@ -4,27 +4,40 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeira página html</title>
+    <title>Primeira página HTML</title>
 </head>
 <body>
     <center>
-    <h1> Meu nome é Pedro </h1>
-    <h2> Formulario de cadastro </h2>
+        <h1>Meu nome é Pedro</h1>
+        <h2>Formulário de cadastro</h2>
     </center>
-<form id="formulario" action = "processa.php" method = "POST">
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nome">
 
-  <label for="telefone">Telefone</label>
-  <input type="text" id="telefone" name="telefone">
+    
+    <form id="formulario" action="" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
 
-     <label for="email">Email</label>
-  <input type="text" id="email" name="email">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
 
-  
-  <br>
-  <button type = "submit" onclick = "alert('cadastrado com sucesso')">Cadastrar</button>
-</form>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    $telefone = $_POST["telefone"];
+    $email = $_POST["email"];
+    echo "Nome recebido: " . $nome . "<br>";
+    echo "Telefone recebido: " . $telefone . "<br>";
+    echo "E-mail recebido: " . $email;
+}
+?>
 
 </body>
 </html>
