@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
   echo "Nome recebido: " . htmlspecialchars($nome) . "<br>";
   echo "Telefone recebido: " . htmlspecialchars($telefone) . "<br>";
-  echo "E-mail recebido: " . htmlspecialchars($email);
+  echo "E-mail recebido: " . htmlspecialchars($email) . "<br";
   echo("cadastro realizado");
 }
 ?>
