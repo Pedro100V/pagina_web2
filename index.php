@@ -38,9 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     pg_query_params(
         $conexao,
         "INSERT INTO usuarios (nome, telefone, email) VALUES ($1, $2, $3)",
-        array($nome, $telefone, $email)
     );
 
+  echo "Nome recebido: " . $nome . "<br>";
+    echo "Telefone recebido: " . $telefone . "<br>";
+    echo "E-mail recebido: " . $email . "<br>";
     echo "Cadastro realizado com sucesso!";
 }
 ?>
