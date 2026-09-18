@@ -8,11 +8,9 @@
 </head>
 <body>
     <center>
-        <h1>Meu nome é Pedro</h1>
         <h2>Formulário de cadastro</h2>
     </center>
 
-    
     <form id="formulario" action="" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome">
@@ -33,9 +31,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $telefone = $_POST["telefone"];
     $email = $_POST["email"];
-    echo "Nome recebido: " . $nome . "<br>";
-    echo "Telefone recebido: " . $telefone . "<br>";
-    echo "E-mail recebido: " . $email;
+
+    $databaseUrl = getenv("DATABASE_URL");
+    $conexao = pg_connect($databaseUrl);
+
+    pg_query_params(
+        $conexao,
+        "INSERT INTO usuarios (nome, telefone, email) VALUES ($1, $2, $3)",
+        array($nome, $telefone, $email)
+    );
+
+    echo "Cadastro realizado com sucesso!";
 }
 ?>
 
