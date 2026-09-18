@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array($nome, $telefone, $email)
     );
 
-  
+  echo("cadastro realizado");
 }
 ?>
 
