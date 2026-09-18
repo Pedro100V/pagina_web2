@@ -40,7 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "INSERT INTO usuarios (nome, telefone, email) VALUES ($1, $2, $3)",
         array($nome, $telefone, $email)
     );
-
+  echo "Nome recebido: " . htmlspecialchars($nome) . "<br>";
+  echo "Telefone recebido: " . htmlspecialchars($telefone) . "<br>";
+  echo "E-mail recebido: " . htmlspecialchars($e
   echo("cadastro realizado");
 }
 ?>
